@@ -1,0 +1,293 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 50vw 1fr;
+    grid-template-rows: 41vh 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "table-left current-weather top-right"
+      "chart-area chart-area chart-area"
+      "forecast forecast forecast"
+      "bot bot bot";
+  }
+
+.table-left {
+  display: grid;
+  padding-top: 2vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-area: table-left;
+  height: 40vh;
+  margin-left: -3vw;
+  grid-template-areas:
+    "i-sunrise p-sunrise"
+    "i-sunset p-sunset"
+    "i-pressure p-pressure"
+    "i-wind p-wind"
+    "i-humidity p-humidity";
+}
+
+.i-sunrise {
+  grid-area: i-sunrise;
+}
+
+.i-sunset {
+  grid-area: i-sunset;
+}
+
+.i-pressure {
+  grid-area: i-pressure;
+}
+
+.i-wind {
+  grid-area: i-wind;
+}
+
+.i-humidity {
+  grid-area: i-humidity;
+}
+
+.p-sunrise {
+  grid-area: p-sunrise;
+}
+
+.p-sunset {
+  grid-area: p-sunset;
+}
+
+.p-pressure {
+  grid-area: p-pressure;
+}
+
+.p-wind {
+  grid-area: p-wind;
+}
+
+.p-humidity {
+  grid-area: p-humidity;
+}
+
+/* CURRENT */
+
+.current-weather {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  height: 40vh;
+  padding-top: 3vh;
+  grid-area: current-weather;
+  grid-template-areas:
+    "current-weather-icon current-temp"
+    "current-weather-icon current-feel"
+    "current-weather-description current-weather-description";
+}
+
+.current-weather-description {
+  grid-area: current-weather-description; 
+
+}
+
+.current-weather-icon {
+  grid-area: current-weather-icon;
+  padding:0 0 0 .4vw;
+  margin-top: -1.7vh;
+}
+
+.current-temp {
+  grid-area: current-temp;
+}
+
+.current-feel {
+  grid-area: current-feel;
+}
+
+/* top right */
+
+.top-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-area: top-right;
+  height: 40vh;
+  padding-top: 1.5vh;
+  text-align: center;
+  grid-template-areas:
+    "location"
+    "current-weekday"
+    "current-time"
+    "current-date";
+}
+
+.location {
+  grid-area: location;
+}
+
+.current-weekday {
+  grid-area: current-weekday;
+}
+
+.current-time {
+  grid-area: current-time;
+}
+
+.current-date {
+  grid-area: current-date;
+}
+
+.chart-area {
+  display: grid;
+  grid-template-columns: .2vw 1fr 1fr 1fr 1fr 1fr .01vw;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-area: chart-area;
+  grid-template-areas: ". chart-hi chart-hi chart-hi chart-hi chart-hi .";
+}
+.chart-hi{
+  grid-area: chart-hi;
+  padding-top: 2.5vh;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-area: forecast;
+  margin-top: -2vh;
+  grid-template-areas:
+    "fore-1 fore-2 fore-3 fore-4"
+    "fore-1 fore-2 fore-3 fore-4";
+}
+
+/* forecast */
+
+.fore-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "min-temp-1 fore-i-1 max-temp-1"
+    "fore-1-day fore-1-day fore-1-day";
+  grid-area: fore-1;
+}
+
+.min-temp-1 {
+  grid-area: min-temp-1;
+}
+
+.fore-i-1 {
+  grid-area: fore-i-1;
+}
+
+.max-temp-1 {
+  grid-area: max-temp-1;
+}
+
+.fore-1-day {
+  grid-area: fore-1-day;
+}
+
+/* .fore-2 {
+  grid-area: fore-2;
+}
+
+.fore-3 {
+  grid-area: fore-3;
+}
+
+.fore-4 {
+  grid-area: fore-4;
+} */
+
+
+.fore-2 {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "min-temp-2 fore-i-2 max-temp-2"
+      "fore-2-day fore-2-day fore-2-day";
+    grid-area: fore-2;
+  }
+  
+  .min-temp-2 {
+    grid-area: min-temp-2;
+  }
+  
+  .fore-i-2 {
+    grid-area: fore-i-2;
+  }
+  
+  .max-temp-2 {
+    grid-area: max-temp-2;
+  }
+  
+  .fore-2-day {
+    grid-area: fore-2-day;
+  }
+
+
+  .fore-3 {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "min-temp-3 fore-i-3 max-temp-3"
+      "fore-3-day fore-3-day fore-3-day";
+    grid-area: fore-3;
+  }
+  
+  .min-temp-3 {
+    grid-area: min-temp-3;
+  }
+  
+  .fore-i-3 {
+    grid-area: fore-i-3;
+  }
+  
+  .max-temp-3 {
+    grid-area: max-temp-3;
+  }
+  
+  .fore-3-day {
+    grid-area: fore-3-day;
+  }
+
+
+  .fore-4 {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-rows: 4fr 4fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "min-temp-4 fore-i-4 max-temp-4"
+      "fore-4-day fore-4-day fore-4-day";
+    grid-area: fore-4;
+  }
+  
+  .min-temp-4 {
+    grid-area: min-temp-4;
+  }
+  
+  .fore-i-4 {
+    grid-area: fore-i-4;
+  }
+  
+  .max-temp-4 {
+    grid-area: max-temp-4;
+  }
+  
+  .fore-4-day {
+    grid-area: fore-4-day;
+  }
+
+  .bot {
+    grid-area: bot;
+    margin-top:-5vh;
+  }
+

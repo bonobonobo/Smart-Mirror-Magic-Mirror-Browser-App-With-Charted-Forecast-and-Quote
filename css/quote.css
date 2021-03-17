@@ -1,0 +1,58 @@
+body {
+  background-color: black;
+  color: #cccccc;
+}
+
+h2 {
+  padding: 0;
+  font-weight: 100;
+}
+
+p#quote,
+label {
+  font-weight: 300;
+}
+
+p#author {
+  font-weight: 300;
+  font-size: 1.4em;
+  margin-bottom: 30px;
+}
+
+.btn-sm {
+  height: 25px;
+  padding-top: 0;
+  line-height: 25px;
+}
+
+#quote {
+  font-size: 1.2em;
+  text-align: center;
+
+}
+
+.btn.btn-default {
+  transition: all 0.5s ease;
+  background-color: rgba(255, 255, 255, 0);
+  color: #cccccc;
+  font-weight: 300;
+}
+.btn.btn-default:hover {
+  background-color: rgba(100, 255, 100, 0.3);
+}
+
+.btn.btn-primary {
+  transition: all 0.5s ease;
+  background-color: rgba(100, 255, 100, 0.4);
+  border-color: rgba(0, 200, 0, 0.8);
+  font-weight: 300;
+}
+.btn.btn-primary:hover {
+  background-color: rgba(0, 255, 0, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 20px 10px;
+  }
+}
