@@ -1,13 +1,5 @@
 # Smart Mirror Magic Mirror Browser App With Charted Forecast and Quote
- Using OpenWeatherMaps / Geolocation / Wikiquotes This app is meant to function in-browser on older mobile devices 
-
-
 Using OpenWeatherMaps / Geolocation / Wikiquotes This app is meant to function in-browser on older mobile devices 
-
-# Simple Magic Mirror Weather App With Quotes Date Geolocation
-![wapp](wapp.png "App screenshot")
-
-This app is meant to function in-browser on older mobile devices. Version for Polish speaking users, but can easily be changed to english. Based on openweathermap API.
 
 Updated every 15 minutes:
 
