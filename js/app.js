@@ -131,7 +131,9 @@ function setPosition(position) {
   fetchInter(latitude, longitude);
 
 }
-
+function resetIconClass(){
+  $('.current-weather-icon i').removeClass()
+};
 
 function getOne(latitude, longitude) {
   let api = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&lang=${language}&exclude=${exclude}&appid=${key}&units=${units}`;
@@ -303,8 +305,8 @@ function getOne(latitude, longitude) {
 function getWeather(latitude, longitude) {
   let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=${language}&appid=${key}&units=${units}`;
 
-
   fetch(api)
+  
     .then(function (response) {
       let data = response.json();
       return data;
@@ -335,6 +337,7 @@ function getWeather(latitude, longitude) {
         },920000)
       };
     })
+
     .then(function () {
       displayWeather();
     });
@@ -375,18 +378,14 @@ function displayOne() {
 }
 
 function fetchInter(latitude, longitude) {
-  fetchCurrent = setInterval(() => getWeather(latitude, longitude), 900000);
-  fetchFore = setInterval(() => getOne(latitude, longitude), 1800000);
 
+  setInterval(function(){
+    resetIcon = resetIconClass();
+    fetchCurrent =  getWeather(latitude, longitude)
+  },900000);
+  fetchFore = setInterval(() => getOne(latitude, longitude), 1800000);
 } // 900000 899000
 
-function resetIconClass(){
-  $('.current-weather-icon i').removeClass()
-}
-
-$(document).ready(function(){
-  setInterval(resetIconClass, 900000)
-});
 
 
 var elem = document.getElementById("body");
