@@ -108,7 +108,7 @@ onecall.temperature = {
 };
 
 // CONSTANTS FOR THE CALL
-const key = "8407e1162a7c3c0ccf3f01229fe8ea14";
+const key = "KeyHere";
 const language = "pl";
 const units = "metric";
 const exclude = "minutely";
