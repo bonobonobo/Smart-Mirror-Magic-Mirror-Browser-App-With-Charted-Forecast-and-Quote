@@ -2,7 +2,7 @@
 
 var now, dd, td;
 var months = [
-  "Stycznia",
+  "Stycznia", //January
   "Lutego",
   "Marca",
   "Kwietnia",
@@ -13,16 +13,16 @@ var months = [
   "Września",
   "Października",
   "Listopada",
-  "Grudnia",
+  "Grudnia",//December
 ];
 var days = [
-  "Niedziela",
+  "Niedziela",//Sunday
   "Poniedziałek",
   "Wtorek",
   "Środa",
   "Czwartek",
   "Piątek",
-  "Sobota",
+  "Sobota",//Saturday
 ];
 
 document.addEventListener("DOMContentLoaded", init, false);
