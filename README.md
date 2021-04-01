@@ -18,7 +18,7 @@ Updated every 15 minutes:
 
 Updated every 30 minutes:
 
-- four day forecast with minimum and maxiumum temperatures + icons
+- four day forecast with minimum and maximum temperatures + icons
 - 24hour chart with rainfall and temperatures (extendable up to 48hrs)
 
 Tested on Android 4.0.4 and upward (on 4.0.4 fullscreen doesn't work yet).
